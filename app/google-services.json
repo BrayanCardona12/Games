@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "403311152724",
+    "project_id": "games-c767b",
+    "storage_bucket": "games-c767b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403311152724:android:fb81dabd07f29c004ee7c1",
+        "android_client_info": {
+          "package_name": "com.example.games"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403311152724-6g3vtsv3lnubif9j37170a8mtnkne1vr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.games",
+            "certificate_hash": "563221699d344864d448231261c1d692655f0538"
+          }
+        },
+        {
+          "client_id": "403311152724-41h82piuvvm196deheejods2drgmba5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPQhck6RyLOFFsv52YwmnJ5Av5ew9H6sY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403311152724-41h82piuvvm196deheejods2drgmba5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
