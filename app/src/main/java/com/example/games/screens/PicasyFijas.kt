@@ -27,6 +27,7 @@ import com.example.games.R
 import com.example.games.components.btnEnviar
 import com.example.games.components.marcadorPF
 import com.example.games.components.textAlert
+import com.example.games.components.victoryPF
 import com.example.games.navegation.Routes
 import com.example.games.ui.theme.Pixel
 
@@ -114,12 +115,21 @@ fun PicasYFijas(navController: NavController) {
                     item {
                         if (!statusList) {
                             for (iter in lista) {
-                                Icon(
-                                    imageVector = Icons.Default.Star,
-                                    tint = Color.Black,
-                                    contentDescription = null,
-                                    modifier = Modifier.size(70.dp)
-                                )
+                                Box(contentAlignment = Alignment.Center) {
+                                    Icon(
+                                        imageVector = Icons.Default.Star,
+                                        tint = Color.Black,
+                                        contentDescription = null,
+                                        modifier = Modifier.size(70.dp)
+                                    )
+                                    Text(
+                                        text = "+1", fontFamily = Pixel,
+                                        fontWeight = FontWeight.Bold,
+
+                                        fontSize = 13.sp,
+                                        textAlign = TextAlign.Center,
+                                    )
+                                }
                             }
                         }
                     }
@@ -170,8 +180,8 @@ fun PicasYFijas(navController: NavController) {
             }
 
             fun Verificar() {
-                if (numero.size == puntaje) { }
-                else {
+                if (numero.size == puntaje) {
+                } else {
                     if (numUser.length <= 3 || numUser.length > 4) {
                         error = true
                         resultado = false
@@ -204,7 +214,7 @@ fun PicasYFijas(navController: NavController) {
             }// fin de Verficar
 
             item {
-                btnEnviar(funcion = { Verificar()})
+                btnEnviar(funcion = { Verificar() })
             }
 
             item {
@@ -227,11 +237,9 @@ fun PicasYFijas(navController: NavController) {
             }
 
 
-
-
             item {
                 if (error) {
-                   textAlert(texto = stringResource(R.string.alertPF))
+                    textAlert(texto = stringResource(R.string.alertPF))
                 }
             }
 
@@ -242,18 +250,7 @@ fun PicasYFijas(navController: NavController) {
             statusList = true
             lista.add(puntaje)
 
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(MaterialTheme.colors.primaryVariant),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "Felicitaciones, Hallaste el numero desconocido, acabaste sumar 1 ⭐",
-                    modifier = Modifier.clickable { victoria = !victoria })
-            }
-
-
+            victoryPF {victoria = !victoria}
 
             statusList = false
         }
